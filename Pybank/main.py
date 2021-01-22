@@ -67,7 +67,21 @@ print(f"Greatest Increase in Profits: {month_increase} (${profit_increase})")
 
 print(f"Greatest Decrease in Profits: {month_decrease} (${profit_decrease})")
 
-   
+with open("results.txt","a") as files:
+    files.write(f'Financial Analysis'+'\n')
+    files.write(f'----------------------------'+'\n')
+
+    files.write("Total number of months: " + str(len(month)))
+
+    files.write("Total Revenue in period: $ " + str(total_revenue))
+        
+    files.write("Average monthly change in Revenue : $" + str(monthly_change))
+
+    files.write(f"Greatest Increase in Profits: {month_increase} (${profit_increase})")
+
+    files.write(f"Greatest Decrease in Profits: {month_decrease} (${profit_decrease})")
+
+
 
    
 
