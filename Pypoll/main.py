@@ -98,7 +98,7 @@ Total Votes: {total_votes}
 Khan: {candidate_percent["Khan"]*100}% ({candidates["Khan"]})
 Correy: {candidate_percent["Correy"]*100}% ({candidates["Correy"]})
 Li: {candidate_percent["Li"]*100}% ({candidates["Li"]})
-O'Tooley:{candidate_percent["0'Tooley"]*100}% ({candidates["0'Tooley"]})
+O'Tooley:{candidate_percent["O'Tooley"]*100}% ({candidates["O'Tooley"]})
 -------------------------
 Winner: {winner}
 '''
