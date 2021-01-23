@@ -95,13 +95,14 @@ Election Results
 -------------------------
 Total Votes: {total_votes}
 -------------------------
-Khan: {candidates_percent["Khan"]*100}% ({candidates["Khan"]})
-Correy: {candidates_percent["Correy"]*100}% ({candidates["Correy"]})
-Li: {candidates_percent["Li"]*100}% ({candidates["Li"]})
-O'Tooley:{candidates_percent["0'Tooley"]*100}% ({candidates["0'Tooley"]})
+Khan: {candidate_percent["Khan"]*100}% ({candidates["Khan"]})
+Correy: {candidate_percent["Correy"]*100}% ({candidates["Correy"]})
+Li: {candidate_percent["Li"]*100}% ({candidates["Li"]})
+O'Tooley:{candidate_percent["0'Tooley"]*100}% ({candidates["0'Tooley"]})
 -------------------------
 Winner: {winner}
 '''
+print(report)
 with open("results.txt","w") as file:
     file.write(report)
 
