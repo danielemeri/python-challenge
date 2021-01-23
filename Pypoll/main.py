@@ -54,12 +54,6 @@ print(candidates)
 #             #split line by space
 #     id,country,name = row.split('')
 
-for candidate in candidates.keys():
-    print(candidate)
-for candidate in candidates.keys():
-    print(candidate, candidates[candidate])
-for key, value in candidate.items():
-    print(key, values)
 
 
 
