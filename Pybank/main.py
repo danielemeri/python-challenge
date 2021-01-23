@@ -54,12 +54,6 @@ with open(csvpath, newline='') as csvfile:
 
 #Print Statements
 
-print(f'Financial Analysis'+'\n')
-print(f'----------------------------'+'\n')
-
-print("Total number of months: " + str(len(month)))
-
-print("Total Revenue in period: $ " + str(total_revenue))
       
 print("Average monthly change in Revenue : $" + str(monthly_change))
 
