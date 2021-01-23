@@ -35,11 +35,11 @@ with open(csvpath) as csvfile:
     for row in csvreader:
         # starts counter for votes
         total_votes =  total_votes + 1
-        candidate + row[2]
-    if candidate in candidates.keys():
-        candidates[candidate] += 1
-    else:
-        candidates[candidate] = 1
+        candidate = row[2]
+        if candidate in candidates.keys():
+            candidates[candidate] += 1
+        else:
+            candidates[candidate] = 1
 print(candidates)
 
 
@@ -82,13 +82,34 @@ for key, value in candidate.items():
     #         for name, vote in dic.items():
     #             if vote == votes[0]:
     #                     winner = name
+candidate_percent = {}
+for candidate in candidates.keys():
+    candidate_percent[candidate] = round(candidates[candidate]/total_votes,2)
 
-percent = round(total_votes/candidates_num,2)
+votes = []
+for k,v in candidates.items():
+    votes.append(v)
 
-print(candidates)
-print("Max", max(candidates, key = candidates.get))
+max_votes = max(votes)
 
+for k,v in candidates.items():
+    if v == max_votes:
+        winner = k 
 
+report = f'''
+Election Results
+-------------------------
+Total Votes: {total_votes}
+-------------------------
+Khan: {candidates_percent["Khan"]*100}% ({candidates["Khan"]})
+Correy: {candidates_percent["Correy"]*100}% ({candidates["Correy"]})
+Li: {candidates_percent["Li"]*100}% ({candidates["Li"]})
+O'Tooley:{candidates_percent["0'Tooley"]*100}% ({candidates["0'Tooley"]})
+-------------------------
+Winner: {winner}
+'''
+with open("results.txt","w") as file:
+    file.write(report)
 
                         #    # print format
                         # print("Election Results")
